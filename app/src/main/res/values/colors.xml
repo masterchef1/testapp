@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#68696A</color>
+    <color name="colorPrimaryDark">#65696C</color>
+    <color name="colorAccent">#ffff0000</color>
+    <color name="transparent_grey">#8065696C</color>
+    <color name="grey">#696969</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="offer_grey">#2E2E2E</color>
+    <color name="red">#ffff0000</color>
+    <color name="home_bg">#F5F5F5</color>
+    <array name="array_dot_active">
+        <item>@color/red</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/inactive_color</item>
+    </array>
+
+    <color name="nexon_start">#FCB704</color>
+    <color name="inactive_color">#FFFAE6</color>
+
+</resources>

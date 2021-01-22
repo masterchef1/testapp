@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg">
+
+    <ImageView
+        android:id="@+id/error_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_card"
+        android:src="@drawable/error" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_grey">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="6dp"
+            android:src="@drawable/ic_menu_logo" />
+
+        <ImageView
+            android:id="@+id/bell"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/headset"
+            android:src="@drawable/ic_menu_bell" />
+
+        <ImageView
+            android:id="@+id/headset"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="6dp"
+            android:layout_toLeftOf="@+id/wallet"
+            android:src="@drawable/ic_menu_headset" />
+
+        <LinearLayout
+            android:id="@+id/wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginHorizontal="6dp"
+                android:src="@drawable/ic_menu_wallet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="₹ 0"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/bell"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/red_circle"
+            android:padding="2dp"
+            android:text="9+"
+            android:textColor="@android:color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_bg"
+        android:text="Retry"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/menu_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/menu_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rupee"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/service_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/red_circle"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_menu_logo"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/service_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Services"
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bank_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/red_circle"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_bank"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/bank_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Banking"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rupee"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/colorAccent"
+            app:cardCornerRadius="26dp"
+            app:elevation="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="₹"
+                android:textColor="@color/red"
+                android:textSize="24sp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rupee"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/explore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/explore_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/grey_ring"
+                    android:padding="3dp"
+                    android:src="@android:drawable/ic_menu_compass"
+                    app:tint="@color/grey" />
+
+                <TextView
+                    android:id="@+id/explore_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/more_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/grey_ring"
+                    android:padding="3dp"
+                    android:src="@android:drawable/ic_menu_more"
+                    app:tint="@color/grey" />
+
+                <TextView
+                    android:id="@+id/more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
